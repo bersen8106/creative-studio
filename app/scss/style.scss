@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.box {
+    overflow: hidden;
+    text-align: center;
+}
+
+body {
+    background-color: burlywood;
+}
+
+.box {
+    display: flex;
+}
