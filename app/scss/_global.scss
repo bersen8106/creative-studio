@@ -29,6 +29,7 @@ p {
 
 a {
     display: inline-block;
+    text-decoration: none;
     &:hover {
         font-size: inherit;
         font-weight: inherit;
@@ -94,6 +95,9 @@ body {
     font-family: 'Pacifico';
     font-size: 25px;
     line-height: 38px;
+    position: absolute;
+    left: 46%;
+    color: $bordo;
 }
 
 .short-title {
