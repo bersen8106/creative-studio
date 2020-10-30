@@ -22,6 +22,11 @@ $(function() {
     }); //'.portfolio-corner'
     //------------------------------------
 
+    $('.feedback__slider-inner').slick({
+        arrows: false,
+        dots: true,
+    });
+
 
     // $('.portfolio__btn.mixitup-control-active').on('click', function() {
     //     $(this).parents('.portfolio-corner').removeClass('hide');
