@@ -493,8 +493,6 @@
     
     //------------------//
     .team {
-        // outline: 1px solid #fff;
-        // outline-offset: -10px;
         background-image: url('../images/bg/team-bg.jpg');
         background-size: cover;
         color: #fff;
@@ -514,6 +512,7 @@
     }
     
     .team__item {
+        position: relative;
         max-width: 370px;
         width: 100%;
         &-outer {
@@ -524,12 +523,29 @@
             padding: 10px;
             background-size: cover;
             margin-bottom: 45px;
+            transition: all .2s;
+            filter: blur(0px);
         }
         &-caption {
             text-align: center;
         }
         &-name {
             margin-bottom: 15px;
+        }
+        &-social {
+            display: none;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            .team__item-image {
+                filter: blur(5px);
+            }
+            .team__item-social {
+                display: block;
+            }
         }
     }
     
