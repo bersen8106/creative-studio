@@ -56,4 +56,28 @@ $(function() {
 
     var mixer = mixitup('.portfolio__images');
 
+    // map = new google.maps.Map(document.getElementById('map'), {
+    //     center: { lat: 43.052094, lng: -76.182432 },
+    //     zoom: 15
+    // });
+
+    $('.price__card-btn').on('click', function() {
+        $('.prices__inner').css('filter', 'blur(5px)');
+        $('.js-overlay').fadeIn();
+        // $('.js-overlay').addClass('disabled');
+    });
+
+    $('.popup__close-btn').on('click', function() {
+        $('.js-overlay').fadeOut();
+        $('.prices__inner').css('filter', 'none');
+    });
+
+    $(document).on('mouseup', function(e) {
+        var popup = $('.popup');
+        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+            $('.js-overlay').fadeOut();
+            $('.prices__inner').css('filter', 'none');
+        }
+    });
+
 });

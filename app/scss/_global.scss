@@ -30,8 +30,8 @@ p {
 a {
     display: inline-block;
     text-decoration: none;
+    color: inherit;
     &:hover {
-        font-size: inherit;
         font-weight: inherit;
         line-height: inherit;
     }
@@ -213,6 +213,7 @@ body {
         width: 10px;
         left: 0px;
         top: 0;
+        z-index: 1;
     }
     &::after {
         content: '';
@@ -248,6 +249,13 @@ body {
         width: 10px;
         right: 0px;
         bottom: 0;
+    }
+}
+
+.lemon-corners {
+    &::before,
+    &::after {
+        background-image: url('../images/icons/corner-lemon.svg');
     }
 }
 
