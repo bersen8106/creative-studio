@@ -82,6 +82,27 @@ body {
     margin: 0 auto;
 }
 
+.header-small {
+    background-image: url('../images/bg/contact-header-bg.jpg');
+    background-position: top 0;
+    & .header__title {
+        font-size: 50px;
+        background-image: none;
+        margin-top: -30px;
+        letter-spacing: 0;
+    }
+    & .header__subtitle {
+        font-size: 25px;
+        left: 52%;
+    }
+    & .header__text {
+        display: none;
+    }
+    & .header__inner {
+        min-height: auto;
+    }
+}
+
 .border-block {
     border: 1px solid #fff;
 }

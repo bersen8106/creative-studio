@@ -281,6 +281,7 @@
         grid-gap: 30px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        margin-bottom: 70px;
     }
     
     .portfolio__image {
@@ -290,7 +291,6 @@
         background-position: center;
         background-color: #fff;
         text-align: center;
-        margin-bottom: 70px;
         // border: 1px solid #000;
     }
     
@@ -841,25 +841,8 @@
     }
     
     //---------------------contact.html----------------------//
-    .header-small {
+    .contact-header {
         background-image: url('../images/bg/contact-header-bg.jpg');
-        background-position: top 0;
-        & .header__title {
-            font-size: 50px;
-            background-image: none;
-            margin-top: -30px;
-            letter-spacing: 0;
-        }
-        & .header__subtitle {
-            font-size: 25px;
-            left: 52%;
-        }
-        & .header__text {
-            display: none;
-        }
-        & .header__inner {
-            min-height: auto;
-        }
     }
     
     .contact-page {
@@ -874,4 +857,57 @@
         max-width: 750px;
         margin-bottom: 65px;
         line-height: 25px;
+    }
+    
+    //------------------project-list.html---------------------//
+    .project {
+        padding: 80px 0 100px;
+        &__item {
+            display: flex;
+            height: 330px;
+            margin-bottom: 55px;
+            &-info {
+                padding: 0 5px 0 0;
+            }
+            &-image {
+                max-width: 440px;
+                width: 100%;
+                height: 330px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 50px;
+            }
+            &-title {
+                font-size: 30px;
+                font-weight: 900;
+                margin-bottom: 30px;
+            }
+            &-text {
+                line-height: 25px;
+                p+p {
+                    margin: 35px 0;
+                }
+            }
+            &-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-link {
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+    
+    .pagination {
+        text-align: center;
+        &__list {
+            &-item {
+                display: inline-block;
+            }
+            &-link {
+                padding: 5px 17px;
+                font-size: 18px;
+            }
+        }
     }

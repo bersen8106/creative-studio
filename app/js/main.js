@@ -54,7 +54,7 @@ $(function() {
     //     $('.top-corner').toggleClass('hide');
     // });
 
-    var mixer = mixitup('.portfolio__images');
+
 
     // map = new google.maps.Map(document.getElementById('map'), {
     //     center: { lat: 43.052094, lng: -76.182432 },
@@ -79,5 +79,14 @@ $(function() {
             $('.prices__inner').css('filter', 'none');
         }
     });
+
+    $('.pagination__list-link').on('mouseover', function() {
+        $(this).parents('.js-pagination-corners').addClass('lemon-corners');
+    });
+    $('.pagination__list-link').on('mouseout', function() {
+        $(this).parents('.js-pagination-corners').removeClass('lemon-corners');
+    });
+
+    var mixer = mixitup('.portfolio__images');
 
 });
