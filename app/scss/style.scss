@@ -664,6 +664,7 @@
                 border: none;
                 width: 100%;
                 padding: 0 10px;
+                background-color: transparent;
             }
             &-item {
                 display: flex;
@@ -679,13 +680,16 @@
             }
             &-textarea {
                 width: 100%;
-                padding: 0 10px;
+                padding: 3px 10px 0;
                 outline: none;
                 border: none;
                 resize: none;
+                background-color: transparent;
+                overflow: hidden;
             }
             &-btn {
                 padding: 13px 25px;
+                background-color: transparent;
             }
         }
         &__message-row {
@@ -878,11 +882,6 @@
                 background-size: cover;
                 margin-right: 50px;
             }
-            &-title {
-                font-size: 30px;
-                font-weight: 900;
-                margin-bottom: 30px;
-            }
             &-text {
                 line-height: 25px;
                 p+p {
@@ -892,9 +891,6 @@
             &-footer {
                 display: flex;
                 justify-content: space-between;
-            }
-            &-link {
-                border-bottom: 1px solid #000;
             }
         }
     }
@@ -908,6 +904,53 @@
             &-link {
                 padding: 5px 17px;
                 font-size: 18px;
+            }
+        }
+    }
+    
+    //---------------clients.html------------------//
+    .clients-feedback {
+        padding: 80px 0;
+        &__item {
+            padding-top: 50px;
+            margin-bottom: 30px;
+            &+div {
+                border-top: 1px solid #e5e5e5;
+            }
+            p+p {
+                margin-top: 30px;
+            }
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .review {
+        margin-bottom: 80px;
+        &__form {
+            background-image: url('../images/bg/review-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 970px;
+            margin: auto;
+            color: #fff;
+            padding: 10px;
+            &-inner {
+                padding: 70px 90px;
+            }
+            & .contact__subtitle,
+            & .contact__form-input,
+            & .contact__form-textarea {
+                color: #fff;
+            }
+            & .btn-wrapper {
+                margin-top: 20px;
+            }
+            &-btn {
+                color: #fff;
             }
         }
     }

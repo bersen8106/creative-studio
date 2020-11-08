@@ -103,6 +103,13 @@ body {
     }
 }
 
+.item-date,
+.item-theme {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    height: 100%;
+}
+
 .border-block {
     border: 1px solid #fff;
 }
@@ -125,6 +132,12 @@ body {
     position: absolute;
     left: 46%;
     color: $bordo;
+}
+
+.item-title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
 }
 
 .short-title {
