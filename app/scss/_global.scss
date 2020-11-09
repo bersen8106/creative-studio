@@ -82,6 +82,14 @@ body {
     margin: 0 auto;
 }
 
+.startup-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $lemon;
+}
+
 .header-small {
     background-image: url('../images/bg/contact-header-bg.jpg');
     background-position: top 0;
@@ -137,7 +145,7 @@ body {
 .item-title {
     font-size: 30px;
     font-weight: 900;
-    margin-bottom: 30px;
+    //     margin-bottom: 30px;
 }
 
 .short-title {
@@ -229,7 +237,7 @@ body {
     padding: 0;
     border: none;
     outline: none;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
     font-size: 16px;
 }
