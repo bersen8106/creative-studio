@@ -550,8 +550,16 @@
         &__subtitle {
             left: 50%;
         }
+        &__info {
+            max-width: 828px;
+            text-align: center;
+            margin: auto;
+        }
         &__items {
             display: flex;
+            &+& {
+                margin-top: 70px;
+            }
         }
         &__item {
             min-height: 106px;
