@@ -1236,3 +1236,27 @@
             }
         }
     }
+    
+    //----------product.html-------------//
+    .product {
+        padding: 70px 0;
+        &__image {
+            width: 570px;
+            height: 688px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            float: left;
+            margin: 0 70px 70px 0;
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+        &__text {
+            line-height: 25px;
+            margin-bottom: 40px;
+            p+p {
+                margin-top: 35px;
+            }
+        }
+    }
