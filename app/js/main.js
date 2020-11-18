@@ -27,6 +27,11 @@ $(function() {
         dots: true,
     });
 
+    $('.plan-slider__info').slick({
+        arrows: false,
+        dots: true,
+    });
+
 
     // $('.portfolio__btn.mixitup-control-active').on('click', function() {
     //     $(this).parents('.portfolio-corner').removeClass('hide');
@@ -86,6 +91,64 @@ $(function() {
     $('.pagination__list-link').on('mouseout', function() {
         $(this).parents('.js-pagination-corners').removeClass('lemon-corners');
     });
+
+    //portfolio.html
+
+    // $('.portfolio__image').on('click', function() {
+    //     $(this).css('filter', 'blur(5px)');
+    // });
+
+    $('.portfolio__image').on('click', function() {
+        $('.portfolio-popup').fadeIn();
+        $('.portfolio__images-blur').css('filter', 'blur(5px)');
+        $('.portfolio__images').addClass('disabled');
+        // $('body').addClass('scroll-hidden');
+    });
+
+    $('.popup__close-btn').on('click', function() {
+        $('.portfolio-popup').fadeOut();
+        $('.portfolio__images').removeClass('disabled');
+        $('.portfolio__images').css('filter', 'none');
+        $('body').removeClass('scroll-hidden');
+    });
+
+    $(document).on('mouseup', function(e) {
+        var popup = $('.portfolio-popup');
+        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+            $('.portfolio-popup').fadeOut();
+            $('.portfolio__images').removeClass('disabled');
+            $('.portfolio__images').css('filter', 'none');
+            $('body').removeClass('scroll-hidden');
+        }
+    });
+
+    //----работает с img
+    // $('.portfolio__image').on('click', function() {
+    //     let image = $(this).attr('src');
+    //     $('.portfolio-popup__image').attr('src', image);
+    //     console.log(image);
+    // });
+    //-----------------
+
+    // $('.portfolio__image').on('click', function() {
+    //     let image = $(this).css('backgroundImage');
+    //     $('.portfolio-popup__image').attr('src', image);
+    //     console.log(image);
+    // });
+
+    // let image = $('.portfolio__image').on('click', function() {
+    //     $(this).css('background-image');
+    //     console.log(image);
+    // });
+
+    $(".portfolio__image").click(function() {
+        var bg = $(this).css('background-image');
+        bg = bg.replace('url(', '').replace(')', '').replace(/\"/gi, "");
+        $('.portfolio-popup__image').attr('src', bg);
+    });
+
+
+    //
 
     var mixer = mixitup('.portfolio__images');
 
