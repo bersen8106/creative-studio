@@ -1260,3 +1260,44 @@
             }
         }
     }
+    
+    //-------------404.html-------------//
+    .error {
+        height: 100vh;
+        background-image: url('../images/bg/error-bg.jpg');
+        &-block {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1158px;
+            height: 908px;
+            padding: 10px;
+            background-color: #0e0f10;
+            color: #fff;
+            &__inner {
+                position: relative;
+                height: 100%;
+            }
+            &__text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            &__subtitle {
+                color: #fff;
+                font-size: 38px;
+                position: static;
+            }
+            &__title {
+                font-size: 372px;
+                font-weight: 900;
+                line-height: 100%;
+            }
+            & .price__card-btn {
+                color: #fff;
+            }
+        }
+    }
